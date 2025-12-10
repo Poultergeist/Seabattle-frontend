@@ -1,1 +1,2 @@
+VITE_MAIN_PAGE=localhost:3000
 VITE_AUTH_PAGE=localhost:3001
