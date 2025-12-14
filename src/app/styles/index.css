@@ -1,0 +1,41 @@
+:root {
+    --bg: hsl(0, 0%, 100%);
+    --dark-bg: hsl(0, 0%, 20%);
+    --light-bg: hsl(0, 0%, 95%);
+    
+    --border: hsl(0, 0%, 80%);
+    
+    --primary: hsl(142, 72%, 45%);
+    --primary-dark: hsl(142, 72%, 55%);
+    
+    --danger: hsl(0, 84%, 60%);
+    --danger-dark: hsl(0, 84%, 40%);
+    
+    --warning: hsl(38, 92%, 50%);
+    --warning-dark: hsl(38, 92%, 35%);
+    
+    --success: hsl(142, 76%, 36%);
+    --success-dark: hsl(142, 76%, 64%);
+    
+    --info: hsl(217, 91%, 60%);
+    --info-dark: hsl(217, 91%, 40%);
+    
+    --text-foreground: hsl(0, 0%, 12%);
+    --text-muted-foreground: hsl(0, 0%, 45%);
+}
+
+:root.dark {
+    --bg: hsl(0, 0%, 12%);
+    --dark-bg: hsl(0, 0%, 16%);
+    --light-bg: hsl(0, 0%, 20%);
+    
+    --border: hsl(0, 0%, 20%);
+    
+    --text-foreground: hsl(0, 0%, 100%);
+    --text-muted-foreground: hsl(0, 0%, 60%);
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text-foreground);
+}
