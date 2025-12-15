@@ -2,15 +2,13 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
 
-import { AUTH_PAGE } from './shared/config/constants';
-import { EnvironmentProvider } from './shared/providers/environment';
+import { App } from './App';
+import { PAGES } from './shared/config/constants/pages';
 
-console.log('Auth Page URL:', AUTH_PAGE);
-
-console.log('Current Environment:', import.meta.env.MODE);
+console.log('Available Pages:', PAGES);
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <EnvironmentProvider />
+    <App />
   </StrictMode>
 );

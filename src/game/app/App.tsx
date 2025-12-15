@@ -1,7 +1,11 @@
+import { Route, Routes } from 'react-router-dom';
+
+import { MainPage } from './ui/MainPage';
+
 export const App = () => {
   return (
-    <div>
-      <h1>{'Welcome to the Game Page'}</h1>
-    </div>
+    <Routes>
+      <Route path="*" element={<MainPage />}></Route>
+    </Routes>
   );
 };
