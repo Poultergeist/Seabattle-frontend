@@ -81,6 +81,7 @@ export const Primary: Story = {
           setIsChecked(checked);
           args.onCheckedChange(checked);
         }}
+        aria-label="Primary Switch"
       />
     );
   },
@@ -104,6 +105,7 @@ export const SmallSquareInfo: Story = {
           setIsChecked(checked);
           args.onCheckedChange(checked);
         }}
+        aria-label="Small Info Switch"
       />
     );
   },
@@ -130,6 +132,7 @@ export const LargeRoundedDanger: Story = {
             args.onCheckedChange(checked);
           }}
           text={showText ? ['On', 'Off'] : undefined}
+          aria-label="Large Danger Switch"
         />
         <span className="ml-2 cursor-pointer">
           <input
@@ -171,6 +174,7 @@ export const ThemeVariant: Story = {
           args.onCheckedChange(checked);
         }}
         icon={icon}
+        aria-label="Theme Switcher"
       />
     );
   },
