@@ -1,6 +1,6 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import './index.css';
+import '@/app/styles/base.css';
 
 import { App } from './App';
 import { PAGES } from './shared/config/constants/pages';
