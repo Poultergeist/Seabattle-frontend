@@ -1,8 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import '@/app/styles/base.css';
-import '@/app/styles/index.css';
-
 import { EnvironmentProvider } from './shared/providers/environment';
 
 export const App = () => {

@@ -3,7 +3,7 @@ const plugin = require('tailwindcss/plugin');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ['class'],
+  darkMode: 'class',
   content: [
     './index.html',
     './src/**/*.{ts,tsx,js,jsx}',
@@ -33,9 +33,24 @@ module.exports = {
         info: 'var(--info)',
         'info-dark': 'var(--info-dark)',
 
-        'text-foreground': 'var(--text-foreground)',
-        'text-muted-foreground': 'var(--text-muted-foreground)',
+        'foreground': 'var(--text-foreground)',
+        'muted-foreground': 'var(--text-muted-foreground)',
       },
+      spacing: {
+        18: '4.5rem',
+        22: '5.5rem',
+        26: '6.5rem',
+        30: '7.5rem',
+      },
+      fontSize: {
+        h1: '28px',
+        '3.5xl': '40px',
+        '3xl': '34px',
+        '2.5xl': '28px',
+        '2xs': '0.625rem',
+        '3xs': '0.5rem',
+      },
+
     },
   },
   plugins: [
