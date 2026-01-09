@@ -1,5 +1,4 @@
 import { lazy, Suspense, useMemo } from 'react';
-import { Outlet } from 'react-router-dom';
 
 import { APPS, FALLBACK_APP } from '@/shared/config/constants/apps';
 import { Helpers } from '@/shared/helpers';
@@ -32,7 +31,6 @@ export const EnvironmentProvider = () => {
       <Suspense fallback={<div />}>
         <App />
       </Suspense>
-      <Outlet />
     </>
   );
 };

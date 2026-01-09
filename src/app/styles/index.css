@@ -7,21 +7,27 @@ body {
     :root {
         --bg: hsl(0, 0%, 90%);
         --dark-bg: hsl(0, 0%, 80%);
-        --light-bg: hsl(0, 0%, 100%);
+        --light-bg: hsl(0, 0%, 95%);
         
         --border: hsl(0, 0%, 70%);
         
         --primary: hsl(142, 72%, 45%);
         --primary-dark: hsl(142, 72%, 35%);
         
+        --secondary: hsl(90, 55%, 45%);
+        --secondary-dark: hsl(90, 55%, 35%);
+        
+        --accent: hsl(275, 65%, 45%);
+        --accent-dark: hsl(275, 65%, 35%);
+
         --danger: hsl(0, 84%, 60%);
         --danger-dark: hsl(0, 84%, 40%);
         
         --warning: hsl(38, 92%, 50%);
         --warning-dark: hsl(38, 92%, 35%);
         
-        --success: hsl(142, 76%, 36%);
-        --success-dark: hsl(142, 76%, 64%);
+        --success: hsl(142, 76%, 50%);
+        --success-dark: hsl(142, 76%, 35%);
         
         --info: hsl(217, 91%, 60%);
         --info-dark: hsl(217, 91%, 40%);
@@ -31,9 +37,9 @@ body {
     }
 
     .dark {
-        --bg: hsl(0, 0%, 10%);
+        --bg: hsl(0, 0%, 8%);
         --dark-bg: hsl(0, 0%, 0%);
-        --light-bg: hsl(0, 0%, 20%);
+        --light-bg: hsl(0, 0%, 14%);
         
         --border: hsl(0, 0%, 30%);
         

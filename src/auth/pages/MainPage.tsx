@@ -5,7 +5,7 @@ import { PAGES } from '@/shared/config/constants';
 export const MainPage = () => {
   return (
     <>
-      <Link to={PAGES.GAME_PAGES.ROOT}>{'Go to Game Page'}</Link>
+      <Link to={PAGES.GAME_PAGES_ROOT.ROOT}>{'Go to Game Page'}</Link>
       <h1>{'Welcome to the Auth Main Page'}</h1>
     </>
   );
