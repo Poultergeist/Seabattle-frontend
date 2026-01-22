@@ -33,6 +33,11 @@ export const previewVariants = cva(
 
         foreground: 'bg-foreground',
         'muted-foreground': 'bg-muted-foreground',
+
+        'gradient-primary-secondary': 'bg-gradient-to-r bg-primary-secondary',
+        'gradient-primary-accent': 'bg-gradient-to-r bg-primary-accent',
+        'gradient-secondary-accent': 'bg-gradient-to-r bg-secondary-accent',
+        'gradient-danger-warning': 'bg-gradient-to-r bg-danger-warning',
       },
     },
     defaultVariants: {

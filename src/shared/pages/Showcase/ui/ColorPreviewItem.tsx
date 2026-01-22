@@ -13,8 +13,8 @@ export const ColorPreviewItem = ({
   color,
 }: PreviewProps) => {
   return (
-    <div className="flex flex-col items-center">
-      {previewText && <h2>{previewText}</h2>}
+    <div className="flex flex-col items-center gap-1">
+      {previewText && <h2 className="text-center">{previewText}</h2>}
       <div className={cn(previewVariants({ color }), className)} />
     </div>
   );

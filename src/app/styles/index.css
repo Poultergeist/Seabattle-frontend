@@ -47,3 +47,28 @@ body {
         --text-muted-foreground: hsl(0, 0%, 60%);
     }
 }
+@layer utilities {
+    .bg-primary-secondary {
+        --tw-gradient-from: var(--primary);
+        --tw-gradient-to: var(--secondary);
+        --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    }
+
+    .bg-primary-accent {
+        --tw-gradient-from: var(--primary);
+        --tw-gradient-to: var(--accent);
+        --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    }
+
+    .bg-secondary-accent {
+        --tw-gradient-from: var(--secondary);
+        --tw-gradient-to: var(--accent);
+        --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    }
+
+    .bg-danger-warning {
+        --tw-gradient-from: var(--danger);
+        --tw-gradient-to: var(--warning);
+        --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    }
+}
