@@ -21,6 +21,12 @@ module.exports = {
         primary: 'var(--primary)',
         'primary-dark': 'var(--primary-dark)',
 
+        secondary: 'var(--secondary)',
+        'secondary-dark': 'var(--secondary-dark)',
+
+        accent: 'var(--accent)',
+        'accent-dark': 'var(--accent-dark)',
+
         danger: 'var(--danger)',
         'danger-dark': 'var(--danger-dark)',
 
@@ -33,7 +39,7 @@ module.exports = {
         info: 'var(--info)',
         'info-dark': 'var(--info-dark)',
 
-        'foreground': 'var(--text-foreground)',
+        foreground: 'var(--text-foreground)',
         'muted-foreground': 'var(--text-muted-foreground)',
       },
       spacing: {

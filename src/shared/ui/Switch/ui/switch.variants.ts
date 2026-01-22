@@ -19,7 +19,7 @@ export const switchVariants = cva(
         info: 'border border-info-dark bg-light-bg',
         danger: 'border border-danger-dark bg-light-bg',
         theme:
-          'border border-primary bg-light-bg data-[state=off]:border-primary',
+          'border border-primary bg-light-bg data-[state=off]:border-primary-dark',
       },
     },
     defaultVariants: {
@@ -44,7 +44,7 @@ export const switchThumbVariants = cva(
         info: 'bg-info dark:bg-info-dark',
         danger: 'bg-danger dark:bg-danger-dark',
         theme:
-          'data-[state=off]:bg-primary data-[state=on]:bg-primary-dark data-[state=on]:border-primary-dark',
+          'data-[state=off]:bg-primary-dark data-[state=on]:bg-primary-dark data-[state=on]:border-primary-dark',
       },
     },
     defaultVariants: {
