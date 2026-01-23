@@ -54,6 +54,12 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SERVER_KEY }}
 
+      - name: Add server to known_hosts
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -p ${{ secrets.SERVER_PORT }} ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
+
       - name: Deploy via rsync
         run: |
           rsync -avz -e "ssh -p ${{ secrets.SERVER_PORT }}" dist/ ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:/var/www/seabattle/app
+
