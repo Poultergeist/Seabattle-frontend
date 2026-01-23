@@ -50,7 +50,7 @@ jobs:
           path: dist
 
       - name: Setup SSH
-        uses: webfactory/ssh-agent@v0.8.1
+        uses: webfactory/ssh-agent@v0.9.1
         with:
           ssh-private-key: ${{ secrets.SERVER_KEY }}
 
