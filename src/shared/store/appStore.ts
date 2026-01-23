@@ -1,14 +1,24 @@
 import { create } from 'zustand';
+import { createJSONStorage, persist } from 'zustand/middleware';
 
-// Define the shape of the theme state
+import { LOCAL_STORAGE_KEYS } from '../config';
+
 export interface ThemeState {
   theme: 'light' | 'dark';
   setTheme: (theme: 'light' | 'dark') => void;
 }
 
-// Create the Zustand store for app management
-export const useAppStore = create<ThemeState>(set => ({
-  // Initial theme state
-  theme: 'dark',
-  setTheme: theme => set({ theme }),
-}));
+type AppState = ThemeState;
+
+export const useAppStore = create<AppState>()(
+  persist(
+    set => ({
+      theme: 'dark',
+      setTheme: theme => set({ theme }),
+    }),
+    {
+      name: LOCAL_STORAGE_KEYS.STORE,
+      storage: createJSONStorage(() => localStorage),
+    }
+  )
+);
