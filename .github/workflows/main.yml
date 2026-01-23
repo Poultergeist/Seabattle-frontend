@@ -27,7 +27,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Prepare env
-        run: cp env-production .env && ls -la
+        run: cp env-production .env && ls -la && cat .env
 
       - name: Build
         run: pnpm build
