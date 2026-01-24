@@ -4,7 +4,7 @@ import { createJSONStorage, persist } from 'zustand/middleware';
 import { LOCAL_STORAGE_KEYS } from '../config';
 import { cookieStorage } from '../lib';
 
-export interface ThemeState {
+interface ThemeState {
   theme: 'light' | 'dark';
   setTheme: (theme: 'light' | 'dark') => void;
   not: boolean;
@@ -12,7 +12,7 @@ export interface ThemeState {
 }
 
 // type AppState = ThemeState;
-type SharedState = ThemeState;
+export type SharedState = ThemeState;
 
 // export const useSharedStore = create<AppState>()(
 //   persist(

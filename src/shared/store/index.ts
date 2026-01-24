@@ -1,2 +1,2 @@
 export { useSharedStore } from './appStore';
-export type { ThemeState } from './appStore';
+export type { SharedState } from './appStore';
