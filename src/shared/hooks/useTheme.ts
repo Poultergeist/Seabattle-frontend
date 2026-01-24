@@ -1,13 +1,13 @@
 import { useEffect } from 'react';
 
-import { useAppStore } from '../store';
+import { useSharedStore } from '../store';
 
 type Theme = 'light' | 'dark';
 
 const STORAGE_KEY = 'theme';
 
 export function useTheme() {
-  const { theme, setTheme } = useAppStore();
+  const { theme, setTheme } = useSharedStore();
 
   useEffect(() => {
     const root = document.documentElement;

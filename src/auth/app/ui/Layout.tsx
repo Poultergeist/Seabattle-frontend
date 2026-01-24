@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom';
 
 import { Header } from '@/shared/entities/Header';
+import { CookiesBanner } from '@/shared/ui/CookiesBanner';
 
 export const Layout = () => {
   return (
@@ -9,6 +10,7 @@ export const Layout = () => {
       <main>
         <Outlet />
       </main>
+      <CookiesBanner />
     </div>
   );
 };
