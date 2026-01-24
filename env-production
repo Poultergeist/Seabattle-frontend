@@ -1,2 +1,2 @@
-VITE_MAIN_PAGE=http://localhost:3000
-VITE_AUTH_PAGE=http://localhost:3001
+VITE_MAIN_PAGE=https://seabattle.pp.ua
+VITE_AUTH_PAGE=https://auth.seabattle.pp.ua
