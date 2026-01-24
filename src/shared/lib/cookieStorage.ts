@@ -11,8 +11,9 @@ export const cookieStorage: StateStorage = {
     );
     return matches ? decodeURIComponent(matches[1]) : null;
   },
-  setItem: (name: string, value: string): void => {
-    document.cookie = `${name}=${encodeURIComponent(value)}; domain=${COOKIES_DOMAIN}; path=/; max-age=31536000; ${COOKIES_SECURE}samesite=lax`;
+  setItem: (name: string, value?: string): void => {
+    if (value)
+      document.cookie = `${name}=${encodeURIComponent(value)}; domain=${COOKIES_DOMAIN}; path=/; max-age=31536000; ${COOKIES_SECURE}samesite=lax`;
   },
   removeItem: (name: string): void => {
     document.cookie = `${name}=; domain=${COOKIES_DOMAIN}; path=/; max-age=0; ${COOKIES_SECURE}samesite=lax`;
