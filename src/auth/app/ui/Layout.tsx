@@ -7,7 +7,7 @@ export const Layout = () => {
   return (
     <div className="relative min-h-screen">
       <Header />
-      <main>
+      <main className="isolate">
         <Outlet />
       </main>
       <CookiesBanner />

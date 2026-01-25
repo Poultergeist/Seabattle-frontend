@@ -1,5 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
+import { GAME_ROOT, PAGES } from '@/shared/config/constants/pages';
 import { useConsentCookiesStore } from '@/shared/store/appStore';
 import { cn } from '@/shared/utils';
 
@@ -7,6 +9,7 @@ import { Button } from '../../Button';
 
 export const CookiesBanner = () => {
   const { consentCookies, setConsentCookies } = useConsentCookiesStore();
+  const location = window.location.origin;
 
   return (
     <AnimatePresence>
@@ -17,7 +20,7 @@ export const CookiesBanner = () => {
           exit={{ opacity: 0, y: 12 }}
           transition={{ duration: 0.25, ease: 'easeOut' }}
           className={cn(
-            'bg-background fixed inset-x-1 bottom-1 z-50 flex flex-col gap-1 rounded-lg border border-border p-2 shadow-sm md:px-8 md:py-4',
+            'fixed inset-x-1 bottom-1 z-50 flex flex-col gap-1 rounded-lg border border-border bg-bg p-2 shadow-sm md:px-8 md:py-4',
             'md:bottom-2 md:left-auto md:right-2'
           )}
         >
@@ -33,6 +36,26 @@ export const CookiesBanner = () => {
             {
               'We only store your choice to not show this banner again. Do you accept optional cookies?'
             }
+          </p>
+
+          <p className="text-center text-sm md:text-base">
+            {'You can manage your cookie preferences in the '}
+            {location === GAME_ROOT && (
+              <Link
+                to={PAGES.GAME_PAGES_ROOT.COOKIES}
+                className="underline underline-offset-2"
+              >
+                {'Cookies Policy'}
+              </Link>
+            )}
+            {location !== GAME_ROOT && (
+              <a
+                href={PAGES.GAME_PAGES_ROOT.COOKIES}
+                className="underline underline-offset-2"
+              >
+                {'Cookies Policy'}
+              </a>
+            )}
           </p>
 
           <div className="mt-2 flex flex-col justify-center gap-1 md:mt-0 md:flex-row">
