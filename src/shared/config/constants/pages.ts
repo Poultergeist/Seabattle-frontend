@@ -19,6 +19,7 @@ export const GAME_PAGES = {
   LOBBY: `/lobby`,
   ROOM: `/room`,
   BATTLE: `/battle`,
+  COOKIES: `/cookies-policy`,
 };
 
 export const GAME_PAGES_ROOT = {
@@ -26,6 +27,7 @@ export const GAME_PAGES_ROOT = {
   LOBBY: `${GAME_ROOT}/lobby`,
   ROOM: `${GAME_ROOT}/room`,
   BATTLE: `${GAME_ROOT}/battle`,
+  COOKIES: `${GAME_ROOT}/cookies-policy`,
 };
 
 export const PAGES = {
