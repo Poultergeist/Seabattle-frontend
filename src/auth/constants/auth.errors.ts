@@ -8,4 +8,5 @@ export const AUTH_ERRORS = {
   login_incorrect: 'login_incorrect',
   email_incorrect: 'email_incorrect',
   not_authorized: 'not_authorized',
+  passwords_mismatch: 'passwords_mismatch',
 };

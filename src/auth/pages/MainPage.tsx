@@ -20,21 +20,27 @@ export const MainPage = () => {
       {/* <Link to={PAGES.GAME_PAGES_ROOT.ROOT}>{'Go to Game Page'}</Link>
       <h1>{'Welcome to the Auth Main Page'}</h1>
       <Input placeholder="Enter your username" /> */}
-      <Card className="mx-auto w-full max-w-96 bg-gradient-to-tr from-dark-bg to-light-bg glow-lg glow-secondary">
+      <Card className="mx-auto w-full max-w-96 bg-gradient-to-tr from-dark-bg to-light-bg pb-1.5 glow-lg glow-secondary md:pb-2.5">
         <Tabs defaultValue="login">
           <CardHeader className="flex w-full justify-center">
             <div className="rounded-xl border-border bg-light-bg p-1">
               <TabsList className="p-0">
-                <TabsTrigger value="login" className="h-full text-xl">
+                <TabsTrigger
+                  value="login"
+                  className="h-full text-base md:text-xl"
+                >
                   {'Login'}
                 </TabsTrigger>
-                <TabsTrigger value="register" className="h-full text-xl">
+                <TabsTrigger
+                  value="register"
+                  className="h-full text-base md:text-xl"
+                >
                   {'Register'}
                 </TabsTrigger>
               </TabsList>
             </div>
           </CardHeader>
-          <TabsContents className="px-2.5">
+          <TabsContents className="mt-4 px-1.5 md:mt-6 md:px-2.5">
             <TabsContent value="login" className="!overflow-visible">
               <LoginForm />
             </TabsContent>

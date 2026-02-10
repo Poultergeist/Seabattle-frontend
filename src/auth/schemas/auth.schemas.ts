@@ -17,6 +17,6 @@ export const registerSchema = loginSchema
     confirmPassword: z.string(),
   })
   .refine(data => data.password === data.confirmPassword, {
-    message: 'Passwords do not match',
+    message: AUTH_ERRORS.passwords_mismatch,
     path: ['confirmPassword'],
   });
