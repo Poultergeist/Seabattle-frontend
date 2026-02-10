@@ -16,7 +16,7 @@ import { RegisterForm } from '@/auth/features/auth-register/ui/RegisterForm';
 
 export const MainPage = () => {
   return (
-    <div className="flex size-full flex-1 items-center justify-center">
+    <div className="flex size-full flex-1 items-center justify-center px-5">
       {/* <Link to={PAGES.GAME_PAGES_ROOT.ROOT}>{'Go to Game Page'}</Link>
       <h1>{'Welcome to the Auth Main Page'}</h1>
       <Input placeholder="Enter your username" /> */}
