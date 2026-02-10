@@ -1,4 +1,8 @@
 VITE_MAIN_PAGE=http://localhost:3000
 VITE_AUTH_PAGE=http://localhost:3001
+VITE_ADMIN_PAGE=http://localhost:3002
+
 VITE_COOKIES_DOMAIN=localhost
 VITE_COOKIES_SECURE=false
+
+VITE_API_BASE_URL=http://localhost:3010

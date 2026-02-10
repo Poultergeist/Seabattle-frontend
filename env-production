@@ -1,4 +1,7 @@
 VITE_MAIN_PAGE=https://seabattle.pp.ua
 VITE_AUTH_PAGE=https://auth.seabattle.pp.ua
+
 VITE_COOKIES_DOMAIN=.seabattle.pp.ua
 VITE_COOKIES_SECURE=true
+
+VITE_API_BASE_URL=https://back.seabattle.pp.ua
