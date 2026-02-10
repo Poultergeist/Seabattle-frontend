@@ -7,7 +7,7 @@ export const Header = () => {
   const location = window.location.origin;
 
   return (
-    <header className="sticky top-0 z-10 flex items-center justify-between rounded-b-md border-b-2 border-b-accent bg-light-bg px-2 py-5 shadow-md shadow-accent">
+    <header className="sticky top-0 z-10 flex items-center justify-between rounded-b-md border-b-2 border-b-accent bg-light-bg px-2 py-5 shadow-md shadow-accent transition-colors">
       <div className="flex flex-row gap-2">
         <Link to={PAGES.GAME_PAGES_ROOT.ROOT}>{'Home'}</Link>
         {location === GAME_ROOT && (

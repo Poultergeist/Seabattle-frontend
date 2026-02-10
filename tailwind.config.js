@@ -1,9 +1,11 @@
 const scrollbar = require('tailwind-scrollbar');
 const plugin = require('tailwindcss/plugin');
+const glowPreset = require('./tailwind.glow.preset');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: 'class',
+  presets: [glowPreset],
   content: [
     './index.html',
     './src/**/*.{ts,tsx,js,jsx}',
@@ -12,35 +14,70 @@ module.exports = {
   ],
   theme: {
     extend: {
+      glow: {
+        md: '0 0 14px var(--tw-glow-color)',
+      },
+      glowColor: {
+        bg: 'hsl(var(--bg))',
+        'dark-bg': 'hsl(var(--dark-bg))',
+        'light-bg': 'hsl(var(--light-bg))',
+        border: 'hsl(var(--border))',
+
+        primary: 'hsl(var(--primary))',
+        'primary-dark': 'hsl(var(--primary-dark))',
+
+        secondary: 'hsl(var(--secondary))',
+        'secondary-dark': 'hsl(var(--secondary-dark))',
+
+        accent: 'hsl(var(--accent))',
+        'accent-light': 'hsl(var(--accent-light))',
+        'accent-dark': 'hsl(var(--accent-dark))',
+
+        danger: 'hsl(var(--danger))',
+        'danger-dark': 'hsl(var(--danger-dark))',
+
+        warning: 'hsl(var(--warning))',
+        'warning-dark': 'hsl(var(--warning-dark))',
+
+        success: 'hsl(var(--success))',
+        'success-dark': 'hsl(var(--success-dark))',
+
+        info: 'hsl(var(--info))',
+        'info-dark': 'hsl(var(--info-dark))',
+
+        foreground: 'hsl(var(--text-foreground))',
+        'muted-foreground': 'hsl(var(--text-muted-foreground))',
+      },
       colors: {
-        bg: 'var(--bg)',
-        'dark-bg': 'var(--dark-bg)',
-        'light-bg': 'var(--light-bg)',
-        border: 'var(--border)',
+        bg: 'hsl(var(--bg) / <alpha-value>)',
+        'dark-bg': 'hsl(var(--dark-bg) / <alpha-value>)',
+        'light-bg': 'hsl(var(--light-bg) / <alpha-value>)',
+        border: 'hsl(var(--border) / <alpha-value>)',
+        
+        primary: 'hsl(var(--primary) / <alpha-value>)',
+        'primary-dark': 'hsl(var(--primary-dark) / <alpha-value>)',
 
-        primary: 'var(--primary)',
-        'primary-dark': 'var(--primary-dark)',
+        secondary: 'hsl(var(--secondary) / <alpha-value>)',
+        'secondary-dark': 'hsl(var(--secondary-dark) / <alpha-value>)',
 
-        secondary: 'var(--secondary)',
-        'secondary-dark': 'var(--secondary-dark)',
+        accent: 'hsl(var(--accent) / <alpha-value>)',
+        'accent-light': 'hsl(var(--accent-light) / <alpha-value>)',
+        'accent-dark': 'hsl(var(--accent-dark) / <alpha-value>)',
 
-        accent: 'var(--accent)',
-        'accent-dark': 'var(--accent-dark)',
+        danger: 'hsl(var(--danger) / <alpha-value>)',
+        'danger-dark': 'hsl(var(--danger-dark) / <alpha-value>)',
 
-        danger: 'var(--danger)',
-        'danger-dark': 'var(--danger-dark)',
+        warning: 'hsl(var(--warning) / <alpha-value>)',
+        'warning-dark': 'hsl(var(--warning-dark) / <alpha-value>)',
 
-        warning: 'var(--warning)',
-        'warning-dark': 'var(--warning-dark)',
+        success: 'hsl(var(--success) / <alpha-value>)',
+        'success-dark': 'hsl(var(--success-dark) / <alpha-value>)',
 
-        success: 'var(--success)',
-        'success-dark': 'var(--success-dark)',
+        info: 'hsl(var(--info) / <alpha-value>)',
+        'info-dark': 'hsl(var(--info-dark) / <alpha-value>)',
 
-        info: 'var(--info)',
-        'info-dark': 'var(--info-dark)',
-
-        foreground: 'var(--text-foreground)',
-        'muted-foreground': 'var(--text-muted-foreground)',
+        foreground: 'hsl(var(--text-foreground) / <alpha-value>)',
+        'muted-foreground': 'hsl(var(--text-muted-foreground) / <alpha-value>)',
       },
       spacing: {
         18: '4.5rem',
@@ -56,7 +93,9 @@ module.exports = {
         '2xs': '0.625rem',
         '3xs': '0.5rem',
       },
-
+      boxShadow: {
+        glow: '0 0 10px var(--tw-shadow-color, var(--primary))'
+      }
     },
   },
   plugins: [
