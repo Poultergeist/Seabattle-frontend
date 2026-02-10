@@ -30,10 +30,22 @@ export const GAME_PAGES_ROOT = {
   COOKIES: `${GAME_ROOT}/cookies-policy`,
 };
 
+export const ADMIN_ROOT = env.ADMIN_PAGE.replace(/\/$/, '');
+
+export const ADMIN_PAGES = {
+  ROOT: `/`,
+};
+
+export const ADMIN_PAGES_ROOT = {
+  ROOT: `${ADMIN_ROOT}/`,
+};
+
 export const PAGES = {
   AUTH_PAGES,
   GAME_PAGES,
+  ADMIN_PAGES,
   AUTH_PAGES_ROOT,
   GAME_PAGES_ROOT,
+  ADMIN_PAGES_ROOT,
   PREVIEW: '/preveiw',
 };

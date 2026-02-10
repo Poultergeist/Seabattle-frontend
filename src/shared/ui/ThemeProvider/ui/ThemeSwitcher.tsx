@@ -20,6 +20,7 @@ export const ThemeSwitcher = () => {
       onCheckedChange={isDark => changeTheme(isDark ? 'dark' : 'light')}
       icon={themeIcon}
       variant="theme"
+      aria-label="Theme switcher"
     />
   );
 };

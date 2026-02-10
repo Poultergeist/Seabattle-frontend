@@ -1,74 +1,75 @@
 body {
-    background-color: var(--bg);
-    color: var(--text-foreground);
+    background-color: hsl(var(--bg));
+    color: hsl(var(--text-foreground));
 }
 
 @layer base {
     :root {
-        --bg: hsl(0, 0%, 90%);
-        --dark-bg: hsl(0, 0%, 80%);
-        --light-bg: hsl(0, 0%, 95%);
+        --bg: 0 0% 90%;
+        --dark-bg: 0 0% 80%;
+        --light-bg: 0 0% 95%;
         
-        --border: hsl(0, 0%, 70%);
+        --border: 0 0% 70%;
         
-        --primary: hsl(142, 72%, 45%);
-        --primary-dark: hsl(142, 72%, 35%);
+        --primary: 142 72% 45%;
+        --primary-dark: 142 72% 35%;
         
-        --secondary: hsl(90, 55%, 45%);
-        --secondary-dark: hsl(90, 55%, 35%);
+        --secondary: 90 55% 45%;
+        --secondary-dark: 90 55% 35%;
         
-        --accent: hsl(275, 65%, 45%);
-        --accent-dark: hsl(275, 65%, 35%);
+        --accent: 275 65% 45%;
+        --accent-light: 275 65% 65%;
+        --accent-dark: 275 65% 35%;
 
-        --danger: hsl(0, 84%, 60%);
-        --danger-dark: hsl(0, 84%, 40%);
+        --danger: 0 84% 60%;
+        --danger-dark: 0 84% 40%;
         
-        --warning: hsl(38, 92%, 50%);
-        --warning-dark: hsl(38, 92%, 35%);
+        --warning: 38 92% 50%;
+        --warning-dark: 38 92% 35%;
         
-        --success: hsl(142, 76%, 50%);
-        --success-dark: hsl(142, 76%, 35%);
+        --success: 142 76% 50%;
+        --success-dark: 142 76% 35%;
         
-        --info: hsl(217, 91%, 60%);
-        --info-dark: hsl(217, 91%, 40%);
+        --info: 217 91% 60%;
+        --info-dark: 217 91% 40%;
         
-        --text-foreground: hsl(0, 0%, 0%);
-        --text-muted-foreground: hsl(0, 0%, 40%);
+        --text-foreground: 0 0% 0%;
+        --text-muted-foreground: 0 0% 40%;
     }
 
     .dark {
-        --bg: hsl(0, 0%, 8%);
-        --dark-bg: hsl(0, 0%, 0%);
-        --light-bg: hsl(0, 0%, 14%);
+        --bg: 0 0% 8%;
+        --dark-bg: 0 0% 0%;
+        --light-bg: 0 0% 14%;
         
-        --border: hsl(0, 0%, 30%);
+        --border: 0 0% 30%;
         
-        --text-foreground: hsl(0, 0%, 100%);
-        --text-muted-foreground: hsl(0, 0%, 60%);
+        --text-foreground: 0 0% 100%;
+        --text-muted-foreground: 0 0% 60%;
     }
 }
 @layer utilities {
     .bg-primary-secondary {
-        --tw-gradient-from: var(--primary);
-        --tw-gradient-to: var(--secondary);
+        --tw-gradient-from: hsl(var(--primary));
+        --tw-gradient-to: hsl(var(--secondary));
         --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
     }
 
     .bg-primary-accent {
-        --tw-gradient-from: var(--primary);
-        --tw-gradient-to: var(--accent);
+        --tw-gradient-from: hsl(var(--primary));
+        --tw-gradient-to: hsl(var(--accent));
         --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
     }
 
     .bg-secondary-accent {
-        --tw-gradient-from: var(--secondary);
-        --tw-gradient-to: var(--accent);
+        --tw-gradient-from: hsl(var(--secondary));
+        --tw-gradient-to: hsl(var(--accent));
         --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
     }
 
     .bg-danger-warning {
-        --tw-gradient-from: var(--danger);
-        --tw-gradient-to: var(--warning);
+        --tw-gradient-from: hsl(var(--danger));
+        --tw-gradient-to: hsl(var(--warning));
         --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
     }
 }
